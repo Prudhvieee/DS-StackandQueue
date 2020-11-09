@@ -90,7 +90,7 @@ namespace DS_StackandQueue
                 count++;
                 temp = temp.next;
             }
-            Console.WriteLine("\nSize :" + count);
+            Console.WriteLine("Size :" + count);
         }
         /// <summary>
         /// makes the stack empty
