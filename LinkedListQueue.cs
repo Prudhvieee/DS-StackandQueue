@@ -50,5 +50,38 @@ namespace DS_StackandQueue
                 Console.Write(node.data + "\n");
             }
         }
+        /// <summary>
+        /// Removing elementts from the queue
+        /// </summary>
+        public void Dequeue()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Queue is Empty");
+            }
+            else
+            {
+                Console.WriteLine(head.data + " removed from Queue");
+                head = head.next;
+            }
+        }
+        /// <summary>
+        /// Displays the size of the queue
+        /// </summary>
+        public void Size()
+        {
+            int count = 0;
+            Node temp = head;
+            if (temp == null)
+            {
+                Console.WriteLine("Queue is Empty");
+            }
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            Console.WriteLine("Size :" + count);
+        }
     }
 }

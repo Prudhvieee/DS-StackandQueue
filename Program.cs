@@ -29,6 +29,12 @@ namespace DS_StackandQueue
             queue.Enqueue(30);
             queue.Enqueue(70);
             queue.Display();
+            //uc-4
+            //removing elements from the queue
+            ///UC4 Dequeue elements.
+            queue.Dequeue();
+            queue.Display();
+            queue.Size();
         }
     }
 }
