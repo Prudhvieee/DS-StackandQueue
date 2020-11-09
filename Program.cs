@@ -12,6 +12,12 @@ namespace DS_StackandQueue
             stack.Push(30);
             stack.Push(56);
             stack.Display();
+            stack.Size();
+            stack.Peak();
+            stack.Pop();
+            Console.WriteLine("Stack :");
+            stack.Display();
+            stack.Size();
         }
     }
 }

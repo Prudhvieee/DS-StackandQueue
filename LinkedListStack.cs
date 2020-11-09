@@ -32,7 +32,7 @@ namespace DS_StackandQueue
         {
             if (top == null)
             {
-                Console.WriteLine("Stack is Empty");
+                Console.WriteLine("\nStack is Empty\n");
             }
             else
             {
@@ -43,6 +43,65 @@ namespace DS_StackandQueue
                     node = node.next;
                 }
                 Console.Write(node.data + "\n");
+            }
+        }
+        /// <summary>
+        /// Pop the element from the stack.
+        /// </summary>
+        public void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("\nStack is Empty\n");
+            }
+            else
+            {
+                Console.WriteLine(top.data + " popped from the Stack");
+                top = top.next;
+            }
+        }
+        /// <summary>
+        /// Peaks the top element from the stack.
+        /// </summary>
+        public void Peak()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("\nStack is Empty\n");
+            }
+            else
+            {
+                Console.WriteLine(top.data + " is the peak element top of Stack");
+            }
+        }
+        // <summary>
+        /// Gives the size of stack.
+        /// </summary>
+        public void Size()
+        {
+            int count = 0;
+            Node temp = top;
+            if (temp == null)
+            {
+                Console.WriteLine("\nStack is Empty\n");
+            }
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            Console.WriteLine("\nSize :" + count);
+        }
+        /// <summary>
+        /// makes the stack empty
+        /// </summary>
+        internal void IsEmpty()
+        {
+            while (this.top != null)
+            {
+                Peak();
+                Pop();
+                Console.WriteLine("\nStack is Empty\n");
             }
         }
     }
